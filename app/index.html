@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>todo</title>
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt|Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+
+      <div id="todoapp">
+
+        <header id="header">
+          <h1><span>P</span><span>O</span><span>S</span><span>T</span> <span>I</span><span>T</span><span>!</span></h1>
+          <input id="new-todo" placeholder="New Post It!">
+        </header>
+
+        <section id="main">
+          <ul id="todo-list"></ul>
+        </section>
+
+      </div>
+
+      <!-- Templates -->
+      <script type="text/template" id="item-template">
+          <div class="view">
+            <img src="../images/pushpin.png">
+            <button class="destroy">X</button>
+            <div class="taskWrapper">
+              <label><%- title %></label>
+              <input class="edit" value="<%- title %>">
+            </div>
+          </div>
+      </script> 
+
+       
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
+    <script src="../bower_components/backbone.localStorage/backbone.localStorage.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/models.js"></script>
+        <script src="scripts/views.js"></script>
+        <script src="scripts/router.js"></script>
+
+        <!-- endbuild -->
+  </body>
+</html>
